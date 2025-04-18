@@ -10,7 +10,7 @@ int main() {
 // Variaveis dos atributos
     char estado1, estado2;
     char cidade1[20], cidade2[20], codigo1[4], codigo2[4];
-    int populaçao1, populaçao2, pontos1, pontos2;
+    int populacao1, populacao2, pontos1, pontos2;
     float area1, area2, PIB1, PIB2;
 
 // Solicitando o usuário que insira os atributos da Carta 1
@@ -33,7 +33,7 @@ int main() {
 // Solicitação da população da cidade
 
     printf("Insira a população da cidade da Carta 1: \n");
-    scanf("%d", &populaçao1);
+    scanf("%d", &populacao1);
 
 // Solicitação da Área em Km²
 
@@ -70,7 +70,7 @@ int main() {
 // Solicitação da população da cidade
 
     printf("Insira a população da cidade da Carta 2: \n");
-    scanf("%d", &populaçao2);
+    scanf("%d", &populacao2);
 
 // Solicitação da Área em Km²
 
@@ -96,7 +96,7 @@ int main() {
     printf("Estado: %c\n", estado1);
     printf("Código: %s\n", codigo1);
     printf("Nome da Cidade: %s\n", cidade1);
-    printf("População: %d\n", populaçao1);
+    printf("População: %d\n", populacao1);
     printf("Área: %f km²\n", area1);
     printf("PIB: %f\n", PIB1);
     printf("Número de Pontos Turísticos: %d\n", pontos1);
@@ -107,7 +107,7 @@ int main() {
     printf("Estado: %c\n", estado2);
     printf("Código: %s\n", codigo2);
     printf("Nome da Cidade: %s\n", cidade2);
-    printf("População: %d\n", populaçao2);
+    printf("População: %d\n", populacao2);
     printf("Área: %f km²\n", area2);
     printf("PIB: %f\n", PIB2);
     printf("Número de Pontos Turísticos: %d\n", pontos2);
