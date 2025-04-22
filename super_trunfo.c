@@ -23,7 +23,7 @@ int main() {
 // Solicitação do Código da Carta
 
     printf("Insira o Código da Carta 1: \n");
-    scanf(" %s", codigo1);
+    scanf("%s", codigo1);
 
 // Solicitação do Nome da Cidade
 
@@ -58,6 +58,10 @@ float densidade1 = (float) populacao1 / area1;
 
 float capita1 =  (PIB1*1e9) / (float) populacao1;
 
+// Calculando o Super Poder da Carta 1 e armazenando na variavel poder1
+
+float poder1 = (float) populacao1 + area1 + PIB1 + pontos1 + capita1 + (1/densidade1);
+
 // Solicitando o usuário que insira os atributos da Carta 2
 
 // Solicitação do Estado da Carta
@@ -68,7 +72,7 @@ float capita1 =  (PIB1*1e9) / (float) populacao1;
 // Solicitação do Código da Carta
 
     printf("Insira o Código da Carta 2: \n");
-    scanf("%s", codigo2);
+    scanf(" %s", codigo2);
 
 // Solicitação do Nome da Cidade
 
@@ -103,6 +107,20 @@ float densidade2 = (float) populacao2 / area2;
 
 float capita2 =  (PIB2*1e9) / (float) populacao2;
 
+// Calculando o Super Poder da Carta 2 e armazenando na variavel poder1
+
+float poder2 = (float) populacao2 + area2 + PIB2 + pontos2 + capita2 + (1/densidade2);
+
+// Comparando as Cartas
+
+int resultadoPopulacao = populacao1 >= populacao2;
+int resultadoArea = area1 >= area2;
+int resultadoPIB = PIB1 >= PIB2;
+int resultadoPontos = pontos1 >= pontos2;
+int resultadoDensidade = densidade1 <= densidade2;
+int resultadoCapita = capita1 >= capita2;
+int resultadoPoder = poder1 >= poder2;
+
 
 // Exibindo os resultados da Carta 1
 
@@ -112,7 +130,7 @@ float capita2 =  (PIB2*1e9) / (float) populacao2;
     printf("Nome da Cidade: %s\n", cidade1);
     printf("População: %d\n", populacao1);
     printf("Área: %.2f km²\n", area1);
-    printf("PIB: %.2f\n", PIB1);
+    printf("PIB: %.2f bilhões de reais\n", PIB1);
     printf("Número de Pontos Turísticos: %d\n", pontos1);
     printf("Densidade Populacional: %.2f\n", densidade1);
     printf("PIB per Capita: %.2f\n", capita1);
@@ -125,10 +143,70 @@ float capita2 =  (PIB2*1e9) / (float) populacao2;
     printf("Nome da Cidade: %s\n", cidade2);
     printf("População: %d\n", populacao2);
     printf("Área: %.2f km²\n", area2);
-    printf("PIB: %.2f\n", PIB2);
+    printf("PIB: %.2f bilhões de reais\n", PIB2);
     printf("Número de Pontos Turísticos: %d\n", pontos2);
     printf("Densidade Populacional: %.2f\n", densidade2);
     printf("PIB per Capita: %.2f\n", capita2);
+
+// Exibindo o resultado das comparações
+
+    printf("Comparação das Cartas:\n");
+
+    if (resultadoPopulacao == 1){
+        printf("População: Carta 1 Venceu\n");
+    } else if (resultadoPopulacao == 0){
+        printf("População: Carta 2 Venceu\n");
+    } else {
+        printf("Resultado: Empate\n");
+    }
+    
+    if (resultadoArea == 1){
+        printf("Área: Carta 1 Venceu\n");
+    } else if (resultadoArea == 0){
+        printf("Área: Carta 2 Venceu\n");
+    } else {
+        printf("Área: Empate\n");
+    }
+
+    if (resultadoPIB == 1){
+        printf("PIB: Carta 1 Venceu\n");
+    } else if (resultadoPIB == 0){
+        printf("PIB: Carta 2 Venceu\n");
+    } else {
+        printf("PIB: Empate\n");
+    }
+
+    if (resultadoPontos == 1){
+        printf("Pontos Turisticos: Carta 1 Venceu\n");
+    } else if (resultadoPontos == 0){
+        printf("Pontos Turisticos: Carta 2 Venceu\n");
+    } else {
+        printf("Pontos Turisticos: Empate\n");
+    }
+
+    if (resultadoDensidade == 1){
+        printf("Densidade Populacional: Carta 1 Venceu\n");
+    } else if (resultadoDensidade == 0){
+        printf("Densidade Populacional: Carta 2 Venceu\n");
+    } else {
+        printf("Densidade Populacional: Empate\n");
+    }
+
+    if (resultadoCapita == 1){
+        printf("PIB per Capita: Carta 1 Venceu\n");
+    } else if (resultadoCapita == 0){
+        printf("PIB per Capita: Carta 2 Venceu\n");
+    } else {
+        printf("PIB per Capita: Empate\n");}
+
+        if (resultadoPoder == 1){
+            printf("Super Poder: Carta 1 Venceu\n");
+        } else if (resultadoPoder == 0){
+            printf("Super Poder: Carta 2 Venceu\n");
+        } else {
+            printf("Super Poder: Empate\n");
+        }
+
 
     return 0;
     
