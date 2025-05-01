@@ -247,7 +247,7 @@ printf("PIB per Capita: %.2f\n", capita2);
         case 5:
         printf("Comparação do primeiro atributo\n");
         printf("Nome das cidades: %s - %s\n", cidade1, cidade2);
-        printf("Atributo utilizado: Densidade Demográfican");
+        printf("Atributo utilizado: Densidade Demográfica\n");
         printf("Valores de cada carta: %.2f - %.2f\n", densidade1, densidade2);
         if (densidade1 < densidade2){
             printf("Vencedor da primeira comparação de atributos: Carta 1\n");
